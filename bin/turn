@@ -6,6 +6,3 @@ board = Array.new(9, " ")
 
 turn(board)
 
-move(board, index)
-
-display_board(board)
