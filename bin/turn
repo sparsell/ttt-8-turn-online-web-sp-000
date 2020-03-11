@@ -4,7 +4,6 @@ require_relative '../lib/turn'
 puts "Welcome to Tic Tac Toe!"
 board = Array.new(9, " ")
 
-input_to_index(input)
 turn(board)
 
 display_board(board)
