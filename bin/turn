@@ -5,3 +5,5 @@ puts "Welcome to Tic Tac Toe!"
 board = Array.new(9, " ")
 
 turn(board)
+
+display_board(board)
