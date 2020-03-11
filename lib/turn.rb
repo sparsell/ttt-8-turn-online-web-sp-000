@@ -1,13 +1,3 @@
-#ask for input
-#get input
-#convert input to index
-#if index is valid
-#  make the move for index
-#  show the board
-#else
-#  ask for input again until you get a valid input
-#end
-
 
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
@@ -33,27 +23,20 @@ def valid_move?(board, index)
   index.between?(0, 8) && !position_taken?(board, index)
 end
 
-def move(board, index, token = "X")
+def move(board, index, token)
     board[index] = token
 end
 
-
-#if index is valid
-#  make the move for input
-#else
-#  ask for input again until you get a valid input
-#end
-
 def turn(board)
   puts "Please enter 1-9:"
-  index = gets.strip
-  input_to_index(index)
-  #if  valid_move?(board, index)
-  #    move(board, index, "X")
-  #    display_board(board)
-  #else
-    #turn(board)
-  #end
+  input = gets.strip
+  index = input_to_index(input)
+  if  valid_move?(board, index)
+      move(board, index, "X")
+      display_board(board)
+  else
+    turn(board)
+  end
 end
 
 
